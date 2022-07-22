@@ -1,0 +1,10 @@
+D:\Учеба\БДиКП\Курсач\curs\curs\bin\Debug\curs.exe.config
+D:\Учеба\БДиКП\Курсач\curs\curs\bin\Debug\curs.exe
+D:\Учеба\БДиКП\Курсач\curs\curs\bin\Debug\curs.pdb
+D:\Учеба\БДиКП\Курсач\curs\curs\obj\Debug\curs.csprojAssemblyReference.cache
+D:\Учеба\БДиКП\Курсач\curs\curs\obj\Debug\curs.Properties.Resources.resources
+D:\Учеба\БДиКП\Курсач\curs\curs\obj\Debug\curs.csproj.GenerateResource.cache
+D:\Учеба\БДиКП\Курсач\curs\curs\obj\Debug\curs.csproj.CoreCompileInputs.cache
+D:\Учеба\БДиКП\Курсач\curs\curs\obj\Debug\curs.exe
+D:\Учеба\БДиКП\Курсач\curs\curs\obj\Debug\curs.pdb
+D:\Учеба\БДиКП\Курсач\curs\curs\obj\Debug\curs.mainForm.resources
