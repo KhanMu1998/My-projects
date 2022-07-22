@@ -1,0 +1,124 @@
+<html>
+<head>
+    <style type="text/css">
+            table {
+          font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+          border-collapse: collapse;
+          color: #686461;
+        }
+        caption {
+          padding: 10px;
+          color: white;
+          background: #8FD4C1;
+          font-size: 18px;
+          text-align: left;
+          font-weight: bold;
+        }
+        th {
+          border-bottom: 3px solid #B9B29F;
+          padding: 10px;
+          text-align: left;
+        }
+        td {
+          padding: 10px;
+        }
+        tr:nth-child(odd) {
+          background: white;
+        }
+        tr:nth-child(even) {
+          background: #E8E6D1;
+        }
+  </style>
+</head>
+<body>
+<div>
+    <form method ="post">
+        <input type="text" name="fio" placeholder="Введите ФИО " />
+        <input type="text" name="passport" placeholder="Паспорт " />
+        <input type="text" name="phone" placeholder="Телефон " />
+        <button type="submit">Добавить</button>
+    </form>
+</div>
+<div>
+    <form method ="post" action="editPerson">
+        <input type="text" name="fio" placeholder="Введите ФИО " />
+        <input type="text" name="passport" placeholder="Паспорт " />
+        <input type="text" name="phone" placeholder="Телефон " />
+        <button type="submit">Изменить</button>
+    </form>
+</div>
+<div>
+    <form method ="post" action="deletePerson">
+        <input type="text" name="fio" placeholder="Введите ФИО " />
+        <button type="submit">Удалить</button>
+    </form>
+</div>
+<div>
+    <form method ="post"  action="apart">
+        <input type="text" name="apartNumber" placeholder="Введите номер квартиры " />
+        <input type="text" name="floor" placeholder="Этаж " />
+        <input type="text" name="entrance" placeholder="Подъезд " />
+        <input type="text" name="owner" placeholder="Владелец " />
+        <input type="text" name="address" placeholder="Адрес " />
+        <button type="submit">Добавить</button>
+    </form>
+</div>
+<div class="tables">
+    <div>
+        <table>
+            <tr>
+                <td> ФИО</td>
+                <td> Паспорт</td>
+                <td> Телефон</td>
+            </tr>
+            {{#persons}}
+                <tr>
+                    <td> {{fio}}</td>
+                    <td> {{passport}}</td>
+                    <td> {{phone}}</td>
+                </tr>
+            {{/persons}}
+        </table>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <td> Адрес</td>
+                <td> Этажей</td>
+                <td> Подъездов</td>
+                <td> Квартир</td>
+            </tr>
+            {{#houses}}
+                <tr>
+                    <td> {{address}}</td>
+                    <td> {{floorsNumber}}</td>
+                    <td> {{entrancesNumber}}</td>
+                    <td> {{apartsNumber}}</td>
+                </tr>
+            {{/houses}}
+        </table>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <td> Квартира</td>
+                <td> Этаж</td>
+                <td> Подъезд</td>
+                <td> Владелец</td>
+                <td> Адрес</td>
+            </tr>
+            {{#aparts}}
+                <tr>
+                    <td> {{apartNumber}}</td>
+                    <td> {{floor}}</td>
+                    <td> {{entrance}}</td>
+                    <td> {{owner.fio}}</td>
+                    <td> {{address.address}}</td>
+                </tr>
+            {{/aparts}}
+        </table>
+    </div>
+
+</div>
+</body>
+</html>

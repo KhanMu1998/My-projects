@@ -1,0 +1,148 @@
+<html>
+<head>
+    <style type="text/css">
+    table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    border-collapse: collapse;
+    color: #686461;
+    }
+    caption {
+    padding: 10px;
+    color: white;
+    background: #8FD4C1;
+    font-size: 18px;
+    text-align: left;
+    font-weight: bold;
+    }
+    th {
+    border-bottom: 3px solid #B9B29F;
+    padding: 10px;
+    text-align: left;
+    }
+    td {
+    padding: 10px;
+    }
+    tr:nth-child(odd) {
+    background: white;
+    }
+    tr:nth-child(even) {
+    background: #E8E6D1;
+    }
+    .form_container {
+        display: flex;
+        justify-content: space-around;
+        align-items:baseline;
+        width: 100%;
+        margin: 40px;
+    }
+    form {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        margin: 0px;
+        border: 1px gray solid;
+        padding: 5px;
+        width: 25%;
+
+    }
+    input {
+        margin: 10px 0;
+        padding: 5px;
+        border: 0px;
+        border-bottom: 2px gray solid;
+        width: 90%;
+    }
+    body {
+
+        margin:0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+
+    }
+    button {
+        width: 90%;
+        padding: 5px;
+        margin-bottom: 8px;
+        border: 1px rgb(118, 118, 118) solid;
+        border-radius: 5px;
+
+    }
+    .table_container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%
+    }
+    .back {
+        width: 200px;
+        padding: 5px;
+    }
+    .nav_button {
+        background: rgb(239, 239, 239);
+        width: 20%;
+        height: 70px;
+        border-radius: 15px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-decoration: none;
+        text-decoration: none;
+        color: black;
+        font-size: 25px;
+        font-family: 'Times New Roman', Times, serif;
+        border: 1px rgb(118, 118, 118) solid;
+    }
+    .nav_button:hover, button:hover {
+        background: #8FD4C1;
+        cursor: pointer;
+        border: 1px rgb(118, 118, 118) solid;
+
+    }
+    select {
+        margin: 10px 0;
+        padding: 5px;
+        padding-left: 1px;
+        border: 0px;
+        border-bottom: 2px gray solid;
+        width: 90%;
+        color:gray;
+    }
+    option {
+        color:black;
+    }
+  </style>
+</head>
+<body>
+<div class="form_container">
+
+    <form method ="post" action="editPerson">
+        <p>Изменение физ. лица</p>
+            <label>ФИО</label>
+        <select name="fio" onchange="this.style.color='black'">
+            {{#persons}}
+                <option value="{{fio}}">{{fio}}</option>
+            {{/persons}}
+        </select>
+        {{#persons}}
+                <label>Паспорт</label>
+            <input type="text" name="passport" value="{{passport}} " />
+                <label>Телефон</label>
+            <input type="text" name="phone" value="{{phone}} " />
+        {{/persons}}
+        <button type="submit">Изменить</button>
+    </form>
+
+
+</div>
+
+<div class=table_container>
+
+    <a href="../" class="nav_button"> На главную</a>
+</div>
+
+
+</body>
+</html>
